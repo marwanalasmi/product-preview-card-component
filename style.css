@@ -27,15 +27,15 @@ body {
 
 .left-side img {
   max-height: 405px;
-  width: 100%;
   display: block;
   object-fit: cover;
+  flex: 1;
 }
 
 .container {
   background-color: var(--white-color);
   margin: 0 auto;
-  max-width: 50%;
+  max-width: 540px;
   display: flex;
   overflow: hidden;
   border-radius: 0.6rem;
@@ -43,7 +43,7 @@ body {
 
 .right-side {
   padding: 1.7rem;
-  width: 50%;
+  flex: 1;
 }
 
 .category {
@@ -103,10 +103,36 @@ body {
   width: 100%;
   height: 2.7rem;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn img {
   margin-right: 0.5rem;
   width: 0.8rem;
   height: 0.8rem;
+}
+
+.btn:hover {
+  background-color: var(--active-btn);
+}
+
+.btn:active {
+  transform: scale(0.98);
+  background-color: var(--main-btn);
+}
+
+@media (max-width: 500px) {
+  body {
+    align-items: flex-start;
+  }
+
+  .container {
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  .left-side img {
+    object-fit: cover;
+    width: 100%;
+  }
 }
