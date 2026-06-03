@@ -22,6 +22,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   min-height: 100vh;
 }
 
@@ -135,4 +136,25 @@ body {
     object-fit: cover;
     width: 100%;
   }
+}
+
+.attribution {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--main-text);
+  margin-top: 1rem;
+}
+
+.attribution a {
+  color: var(--main-btn);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  color: var(--active-btn);
+  text-decoration: underline;
+}
+
+.attribution a:visited {
+  color: var(--sub-text);
 }
